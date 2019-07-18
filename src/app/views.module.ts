@@ -1,20 +1,11 @@
 import { NgModule } from '@angular/core';
-
 import { ViewsRoutingModule } from './views-routing.module';
-
-import { TranslationModule } from './';
+import { TranslationModule } from './translation.module';
 
 @NgModule({
   imports: [
     ViewsRoutingModule,
-    PageNotFoundModule,
-    LandingModule,
-    PreOrderModule,
-    SummaryModule,
-    TermsAndConditionsModule,
-    PreBookedDialogModule,
-    PaymentErrorDialogModule,
-    ExistingUserDialogModule
+    TranslationModule
   ]
 })
 export class ViewsModule {}

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TranslationComponent } from './translation.component';
+import { TranslationComponent } from './translation/translation.component';
 
 
 import { ViewsRoutingModule } from './views-routing.module';

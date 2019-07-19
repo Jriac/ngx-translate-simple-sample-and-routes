@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-other-module',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OtherComponent implements OnInit {
 
-  constructor() { }
+  constructor(translate: TranslateService) { 
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
   ngOnInit() {
+  
+  
   }
 
 }

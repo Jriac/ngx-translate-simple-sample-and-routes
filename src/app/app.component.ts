@@ -1,5 +1,5 @@
 import { Component,Directive } from '@angular/core';
-
+import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -7,4 +7,9 @@ import { Component,Directive } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  constructor(translate: TranslateService) { 
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+
 }

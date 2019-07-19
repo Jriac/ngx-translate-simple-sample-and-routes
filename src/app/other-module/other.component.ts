@@ -8,9 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class OtherComponent implements OnInit {
 
-  constructor(translate: TranslateService) { 
-    translate.setDefaultLang('en');
-    translate.use('en');
+  constructor() { 
   }
 
   ngOnInit() {

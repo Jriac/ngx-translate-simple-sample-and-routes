@@ -5,15 +5,20 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TranslationComponent } from './translation/translation.component';
 import { OtherComponent } from './other-module/other.component';
-import {TranslateModule} from '@ngx-translate/core';
+
 import { ViewsRoutingModule } from './views-routing.module';
+import {TranslateModule,TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
+
 @NgModule({
-  imports: [BrowserModule, FormsModule, ViewsRoutingModule,TranslateModule.forRoot({
+  imports: [BrowserModule,HttpClientModule, FormsModule, ViewsRoutingModule,TranslateModule.forRoot({
             loader: {
-                provide: TranslateHttpLoader,
-                useFactory: HttpClient,
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
         })],

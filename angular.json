@@ -25,7 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [ "../node_modules/i18next/i18next.js", "../node_modules/i18next-xhr-backend/i18nextXHRBackend.js", "../node_modules/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js" ]
+            "scripts": []
           },
           "configurations": {
             "production": {

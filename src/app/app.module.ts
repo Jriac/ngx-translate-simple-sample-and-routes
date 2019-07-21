@@ -14,6 +14,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
 }
 
+//explicit way to set the path
+export function createTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n', '.json');
+}
+
 @NgModule({
     imports: [BrowserModule, HttpClientModule, FormsModule, ViewsRoutingModule, TranslateModule.forRoot({
         loader: {

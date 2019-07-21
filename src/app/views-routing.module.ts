@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {OtherComponent} from './other-module/other.component'
+import { OtherComponent } from './other-module/other.component'
 import { TranslationComponent } from './translation/translation.component';
-import {LocalizeRouterModule,LocalizeRouterSettings,LocalizeParser,ManualParserLoader} from 'localize-router';
-import {LocalizeRouterHttpLoader} from 'localize-router-http-loader';
-import {TranslateService} from '@ngx-translate/core';
+import { LocalizeRouterModule, LocalizeRouterSettings, LocalizeParser, ManualParserLoader } from 'localize-router';
+import { LocalizeRouterHttpLoader } from 'localize-router-http-loader';
+import { TranslateService } from '@ngx-translate/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Location } from '@angular/common';
 
@@ -33,13 +33,13 @@ const routes: Routes = [
 
 @NgModule({
   imports: [LocalizeRouterModule.forRoot(routes, {
-      parser: {
-        provide: LocalizeParser,
-        useFactory: HttpLoaderFactory,
-        deps: [TranslateService, Location, LocalizeRouterSettings, HttpClient]
-      }
-    }),RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' }),
+    parser: {
+      provide: LocalizeParser,
+      useFactory: HttpLoaderFactory,
+      deps: [TranslateService, Location, LocalizeRouterSettings, HttpClient]
+    }
+  }), RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' }),
   ],
-  exports: [RouterModule,LocalizeRouterModule]
+  exports: [RouterModule, LocalizeRouterModule]
 })
 export class ViewsRoutingModule { }

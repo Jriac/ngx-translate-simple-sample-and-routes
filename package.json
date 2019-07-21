@@ -13,11 +13,12 @@
     "@ngx-translate/core": "11.0.1",
     "@ngx-translate/http-loader": "4.0.0",
     "core-js": "2.6.9",
-    "i18next-browser-languagedetector": "3.0.1",
-    "i18next-xhr-backend": "3.0.0",
+    "localize-router": "1.0.1",
+    "localize-router-http-loader": "^1.0.2",
     "ng2-i18next": "0.1.6",
     "rxjs": "6.5.2",
-    "tslib": "^1.10.0",
+    "rxjs-compat": "^6.5.2",
+    "tslib": "1.10.0",
     "zone.js": "0.9.1"
   },
   "scripts": {

@@ -1,6 +1,12 @@
-<a routerLink="landing">landing</a>
-<br>
-<a routerLink="other">other</a>
+
+
+  <a [routerLink]="'/landing' | localize" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+    {{'routes.landing' | translate}}
+  </a>
+  <br>
+  <a [routerLink]="'/other' | localize" [routerLinkActive]="['router-link-active']">
+    {{'routes.other' | translate}}
+  </a>
 <br>
 <select (change)="changeLanguage($event.target.value)">
     <option selected>choose lang</option>

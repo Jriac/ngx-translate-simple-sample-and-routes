@@ -1,4 +1,10 @@
 {
   "hello-world": "hola mundo! ngxtranslate funciona",
-  "what-is-your-name": "como te llamas?"
+  "what-is-your-name": "como te llamas?",
+  "routes": {
+    "landing": "inicio",
+    "other": "otros"
+  },
+  "landing": "inicio",
+  "other": "otros"
 }

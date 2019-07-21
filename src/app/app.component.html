@@ -1,7 +1,10 @@
-
-<a routerLink="landing" >landing</a>
+<a routerLink="landing">landing</a>
 <br>
 <a routerLink="other">other</a>
+<select (change)="changeLanguage($event.target.value)">
+    <option selected>choose lang</option>
+    <option *ngFor="let i of languages">{{i}}</option>
+</select>
 
 
 <router-outlet></router-outlet>

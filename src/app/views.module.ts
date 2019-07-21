@@ -8,4 +8,4 @@ import { TranslationModule } from './translation/Translation.module';
     TranslationModule
   ]
 })
-export class ViewsModule {}
+export class ViewsModule { }

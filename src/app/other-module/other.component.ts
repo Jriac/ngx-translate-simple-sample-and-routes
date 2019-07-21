@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-other-module',
@@ -8,12 +7,12 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class OtherComponent implements OnInit {
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit() {
-  
-  
+
+
   }
 
 }
